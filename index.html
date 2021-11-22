@@ -10,9 +10,15 @@
     <button id='addHabitButton'>Add</button>
     <script>
         const addHabitButton = document.getElementById("addHabitButton");
-        addHabitButton.addEventListener("click",addHabit);
+        addHabitButton.addEventListener("click",getData);
         function addHabit() {
             alert("Habit added");
+        }
+
+        async function getData() {
+            const api_url = "https://api.github.com/users/Pich78/repos";
+            const response = await fetch(api_url);
+            console.log(await response.json());
         }
     </script>
 </body>
