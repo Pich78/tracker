@@ -16,7 +16,7 @@
         }
 
         async function getData() {
-            const api_url = "https://api.github.com/repos/Pich78/tracker/branches/gh-pages/README.md";
+            const api_url = "https://api.github.com/repos/Pich78/tracker/branches/gh-pages/contents/README.md";
             const response = await fetch(api_url);
             console.log(await response.json());
         }
