@@ -17,9 +17,15 @@
 
         async function getData() {
             const api_url = "https://api.github.com/repos/Pich78/tracker/contents/README.md?ref=gh-pages";
-            const response = await fetch(api_url);
-            console.log(await response.json());
+            try {
+                const response = await fetch(api_url);
+                console.log(await response.json());
+            } catch (error) {
+                console.error(error);
+            }
         }
+        
+        
     </script>
 </body>
 </html>
