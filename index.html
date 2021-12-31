@@ -31,11 +31,13 @@
         
         async function createNewFileFunction() {
             const user =  { name:  'Antonio', surname:  'Picciano'  };
+            const token = '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';
             const api_url = "https://api.github.com/repos/Pich78/tracker/contents/test.txt?ref=gh-pages";
             try {
                 const response = await fetch(api_url,   {
                                                             method: 'POST',
                                                             headers: {
+                                                                'Authorization': `token ${token}`
                                                                 'Content-Type': 'application/json;charset=utf-8'
                                                             }, 
                                                             body: JSON.stringify(user)
